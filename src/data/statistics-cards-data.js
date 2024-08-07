@@ -7,7 +7,7 @@ import {
 
 export const statisticsCardsData = [
   {
-    color: "gray",
+    color: "orange",
     icon: BanknotesIcon,
     title: "Today's Money",
     value: "$53k",
@@ -18,7 +18,7 @@ export const statisticsCardsData = [
     },
   },
   {
-    color: "gray",
+    color: "red",
     icon: UsersIcon,
     title: "Today's Users",
     value: "2,300",
@@ -29,7 +29,7 @@ export const statisticsCardsData = [
     },
   },
   {
-    color: "gray",
+    color: "blue",
     icon: UserPlusIcon,
     title: "New Clients",
     value: "3,462",
@@ -40,7 +40,7 @@ export const statisticsCardsData = [
     },
   },
   {
-    color: "gray",
+    color: "purple",
     icon: ChartBarIcon,
     title: "Sales",
     value: "$103,430",

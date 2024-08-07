@@ -5,9 +5,12 @@ import {
   InformationCircleIcon,
   ServerStackIcon,
   RectangleStackIcon,
+  ShoppingBagIcon,
+  DocumentTextIcon,
 } from "@heroicons/react/24/solid";
-import { Home, Profile, Tables, Notifications } from "@/pages/dashboard";
+import { Home, Orders, Products, Invoice, Register, Users } from "@/pages/dashboard";
 import { SignIn, SignUp } from "@/pages/auth";
+import { AddNewProduct, InvoiceDetails } from "@/pages/screen";
 
 const icon = {
   className: "w-5 h-5 text-inherit",
@@ -24,22 +27,34 @@ export const routes = [
         element: <Home />,
       },
       {
-        icon: <UserCircleIcon {...icon} />,
-        name: "profile",
-        path: "/profile",
-        element: <Profile />,
+        icon: <ShoppingBagIcon {...icon} />,
+        name: "products",
+        path: "/products",
+        element: <Products />,
       },
       {
-        icon: <TableCellsIcon {...icon} />,
-        name: "tables",
-        path: "/tables",
-        element: <Tables />,
+        icon: <RectangleStackIcon {...icon} />,
+        name: "orders",
+        path: "/orders",
+        element: <Orders />,
       },
       {
-        icon: <InformationCircleIcon {...icon} />,
-        name: "notifications",
-        path: "/notifications",
-        element: <Notifications />,
+        icon: <DocumentTextIcon {...icon} />,
+        name: "invoice",
+        path: "/invoice",
+        element: <Invoice />,
+      },
+      {
+        icon: <InformationCircleIcon {...icon} />, // Changed the icon for register
+        name: "register",
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        icon: <UserCircleIcon {...icon} />, // Use the UserCircleIcon for users
+        name: "users",
+        path: "/users",
+        element: <Users />,
       },
     ],
   },
@@ -58,6 +73,21 @@ export const routes = [
         name: "sign up",
         path: "/sign-up",
         element: <SignUp />,
+      },
+    ],
+  },
+  {
+    layout: "screen",
+    pages: [
+      {
+        name: "addnewproduct",
+        path: "/addnewproduct",
+        element: <AddNewProduct />,
+      },
+      {
+        name: "invoicedetails",
+        path: "/invoicedetails/:invoiceNumber",
+        element: <InvoiceDetails />,
       },
     ],
   },
